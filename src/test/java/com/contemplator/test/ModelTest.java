@@ -1,33 +1,33 @@
 package com.contemplator.test;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
-class ModelTest {
+public class ModelTest {
 
     private Model model;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() throws Exception {
         model = new Model();
     }
 
-    @org.junit.jupiter.api.Test
-    void sum() {
+    @Test
+    public void sum() {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                Assertions.assertEquals(i + j, model.sum(i, j));
+                assertEquals(i + j, model.sum(i, j));
             }
         }
     }
 
-    @org.junit.jupiter.api.Test
-    void mul() {
+    @Test
+    public void mul() {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                Assertions.assertEquals(i * j, model.mul(i, j));
+                assertEquals(i * j, model.mul(i, j));
             }
         }
     }
